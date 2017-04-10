@@ -4,8 +4,18 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var ArticleSchema = new Schema({
-	//title is a require string
-	title: {
+	//artist
+	artist: {
+		type: String,
+		required: true
+	},
+	//album
+	album: {
+		type: String,
+		required: true
+	},
+	//album image
+	albumImg: {
 		type: String,
 		required: true
 	},
@@ -15,9 +25,9 @@ var ArticleSchema = new Schema({
 		required: true
 	},
   // This only saves one note's ObjectId, ref refers to the Note model
-	note: {
+	comment: {
 	    type: Schema.Types.ObjectId,
-	    ref: "Note"
+	    ref: "Comment"
 	}
 });
 

@@ -5,11 +5,11 @@ var Schema = mongoose.Schema;
 
 var CommentSchema = new Schema({
 	//body is a require string
-	body: {
+	date: {
 		type: String,
 	},
 	//link is a required string
-	date: {
+	body: {
 		type: String,
 	}
 });
